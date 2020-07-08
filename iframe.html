@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>iframe Window</title>
+    <style>
+        body {
+            background-color: #D53C2F;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Iframe</h1>
+    <p>Send Message to parent: <button onclick="sendMessage()">Send</button></p>
+
+    <script>
+        let data = { "AssessmentUrl": "https://ide.yaksha.online/assessment/startTestSession?userId=UHJhc2Vuaml0LkNob3VkaHVyeUBsbnRpbmZvdGVjaC5jb20%3D&testId=54957&companyId=IH&startDate=MTU5NDExNjAyNzQwOA%3D%3D&endDate=MTY1NzE4ODAyNzQwOA%3D%3D", "RecommendationJson": { "testComplete": true, "noOfQuestionsAnswered": 29, "totalQuestions": 29, "skills": [{ "qualifier1": "Angular abhc", "qualifier2": "Cognizant First Time", "qualifier3": "Learning Angular components Second Edition", "qualifier4": "NA", "qualifier5": "NA", "overAll": "Angular abhcCognizant First TimeLearning Angular components Second EditionNANA", "percentage": 100 }, { "qualifier1": "ADP", "qualifier2": "Starting with Angular 4", "qualifier3": "Section Introduction", "qualifier4": "Section Introduction", "qualifier5": "NA", "overAll": "ADPStarting with Angular 4Section IntroductionSection IntroductionNA", "percentage": 100 }, { "qualifier1": "Angular ", "qualifier2": "LTI First Time", "qualifier3": "Angular Four", "qualifier4": "NA", "qualifier5": "NA", "overAll": "Angular LTI First TimeAngular FourNANA", "percentage": 100 }, { "qualifier1": "ADP", "qualifier2": "LTI First Time", "qualifier3": "Mean stack", "qualifier4": "NA", "qualifier5": "NA", "overAll": "ADPLTI First TimeMean stackNANA", "percentage": 100 }, { "qualifier1": "Concept Angular", "qualifier2": "Cognizant First Time", "qualifier3": "Web Applications With Spring and Angular", "qualifier4": "NA", "qualifier5": "NA", "overAll": "Concept AngularCognizant First TimeWeb Applications With Spring and AngularNANA", "percentage": 60 }, { "qualifier1": "Web Technologies", "qualifier2": "Cognizant First Time", "qualifier3": "Modern Web Design Patterns in Angular ", "qualifier4": "NA", "qualifier5": "NA", "overAll": "Web TechnologiesCognizant First TimeModern Web Design Patterns in Angular NANA", "percentage": 100 }, { "qualifier1": "ADP Zero", "qualifier2": "Cognizant First Time", "qualifier3": "JS Mean stack", "qualifier4": "NA", "qualifier5": "NA", "overAll": "ADP ZeroCognizant First TimeJS Mean stackNANA", "percentage": 100 }, { "qualifier1": "ADP", "qualifier2": "Cognizant First Time", "qualifier3": "REALTIME FIREBASE", "qualifier4": "NA", "qualifier5": "NA", "overAll": "ADPCognizant First TimeREALTIME FIREBASENANA", "percentage": 80 }, { "qualifier1": "ADP", "qualifier2": "Beginning Ionic Hybrid Application Development", "qualifier3": "Services and AJAX", "qualifier4": "Calling the Service from a Controller", "qualifier5": "NA", "overAll": "ADPBeginning Ionic Hybrid Application DevelopmentServices and AJAXCalling the Service from a ControllerNA", "percentage": 0 }, { "qualifier1": "ADP", "qualifier2": "LTI First Time", "qualifier3": "Spring five point zero Project Building a Travel Website", "qualifier4": "NA", "qualifier5": "NA", "overAll": "ADPLTI First TimeSpring five point zero Project Building a Travel WebsiteNANA", "percentage": 80 }], "averageScore": 79.31, "weightedScore": 79, "pass": true, "passThresholdPercent": 60, "noOfAttempts": 2, "noOfAttemptsavailable": 2, "start": "07/07/2020 03:33 PM", "end": "07/07/2020 03:44 PM", "errorMsg": null }, "ErrorCode": "", "TestName": "Building a Web Application with Spring and Angular" };
+        function sendMessage() {
+            window.parent.postMessage(data);
+        }
+    </script>
+</body>
+
+</html>

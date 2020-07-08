@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Parent Window</title>
+</head>
+
+<body>
+
+    <h1>Parent Window</h1>
+    <p>Message from Iframe</p>
+    <div id="results"></div>
+    <br />
+    <iframe src="iframe.html" width="450px" height="200px" id="the_iframe"></iframe>
+
+    <script>
+        window.addEventListener('message', (event) => results.innerHTML = JSON.stringify(event.data));
+    </script>
+</body>
+
+</html>
